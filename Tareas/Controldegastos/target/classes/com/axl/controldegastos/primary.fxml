@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextField?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.axl.controldegastos.PrimaryController">
+   <children>
+      <Label text="Control de Gastos Semanales" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+      
+      <!-- HBOX PRINCIPAL QUE DIVIDE LA VENTANA EN DOS COLUMNAS -->
+      <HBox alignment="CENTER" spacing="30.0">
+         <children>
+            
+            
+            <!-- COLUMNA IZQUIERDA: Tus campos de gastos y botones -->
+            
+            <VBox alignment="CENTER_LEFT" spacing="15.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <Label text="Alimentacion: " prefWidth="90.0" />
+                        <TextField fx:id="txtAlimentacion" promptText="Escribe aquí..." />
+                     </children>
+                  </HBox>
+
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <Label text="Refrigerios : " prefWidth="90.0" />
+                        <TextField fx:id="txtRefrigerios" promptText="Escribe aquí..." />
+                     </children>
+                  </HBox>
+
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <Label text="Transporte: " prefWidth="90.0" />
+                        <TextField fx:id="txtTransporte" promptText="Escribe aquí..." />
+                     </children>
+                  </HBox>
+
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <Label text="Telefonia: " prefWidth="90.0" />
+                        <TextField fx:id="txtTelefonia" promptText="Escribe aquí..." />
+                     </children>
+                  </HBox>
+
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <Label text="Otros : " prefWidth="90.0" />
+                        <TextField fx:id="txtOtros" promptText="Escribe aquí..." />
+                     </children>
+                  </HBox>
+                  
+                  <!-- Botones alineados abajo de los campos -->
+                  <HBox alignment="CENTER" spacing="10.0">
+                     <children>
+                        <Button fx:id="btn1" text="Calcular estadisticas" onAction="#calcular"/>
+                        <Button fx:id="btn2" text="Limpiar" onAction="#limpiar"/>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+
+            <!-- ================================================= -->
+            <!-- COLUMNA DERECHA: El panel de Estadísticas         -->
+            <!-- ================================================= -->
+            <VBox alignment="TOP_CENTER" spacing="10.0" style="-fx-border-color: #cccccc; -fx-border-radius: 5; -fx-padding: 10;">
+               <children>
+                  <Label text="Estadísticas" style="-fx-font-weight: bold;" />
+                  
+                  <Label text="Total semanal" />
+                  <TextField fx:id="txtTotal" editable="false" prefWidth="120.0" promptText="0.00" />
+                  
+                  <Label text="Gasto más alto" />
+                  <TextField fx:id="txtGastoAlto" editable="false" prefWidth="120.0" promptText="---" />
+               </children>
+            </VBox>
+
+         </children>
+      </HBox>
+
+   </children>
+   
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>
