@@ -11,12 +11,12 @@
    <children>
       <Label text="Control de Gastos Semanales" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
       
-      <!-- HBOX PRINCIPAL QUE DIVIDE LA VENTANA EN DOS COLUMNAS -->
+      
       <HBox alignment="CENTER" spacing="30.0">
          <children>
             
             
-            <!-- COLUMNA IZQUIERDA: Tus campos de gastos y botones -->
+           
             
             <VBox alignment="CENTER_LEFT" spacing="15.0">
                <children>
@@ -65,9 +65,9 @@
                </children>
             </VBox>
 
-            <!-- ================================================= -->
+          
             <!-- COLUMNA DERECHA: El panel de Estadísticas         -->
-            <!-- ================================================= -->
+
             <VBox alignment="TOP_CENTER" spacing="10.0" style="-fx-border-color: #cccccc; -fx-border-radius: 5; -fx-padding: 10;">
                <children>
                   <Label text="Estadísticas" style="-fx-font-weight: bold;" />
