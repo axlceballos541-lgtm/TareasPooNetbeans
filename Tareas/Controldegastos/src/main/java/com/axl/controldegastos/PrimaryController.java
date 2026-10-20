@@ -20,17 +20,17 @@ public class PrimaryController {
     @FXML
     private void calcular() {
         try {
-            // 1. Leemos los valores de cada TextField y los convertimos a números decimales (double)
+            // 1. Leo los valores de cada TextField y los convierto a números decimales 
             double alimentacion = txtAlimentacion.getText().isEmpty() ? 0.0 : Double.parseDouble(txtAlimentacion.getText());
             double refrigerios  = txtRefrigerios.getText().isEmpty() ? 0.0 : Double.parseDouble(txtRefrigerios.getText());
             double transporte   = txtTransporte.getText().isEmpty() ? 0.0 : Double.parseDouble(txtTransporte.getText());
             double telefonia    = txtTelefonia.getText().isEmpty() ? 0.0 : Double.parseDouble(txtTelefonia.getText());
             double otros        = txtOtros.getText().isEmpty() ? 0.0 : Double.parseDouble(txtOtros.getText());
 
-            // 2. Calculamos el Total Semanal sumando todos los gastos
-            double totalSemanal = alimentacion + refrigerios + transporte + telefonia + otros;
+            // 1. Leo los valores de cada TextField y los convierto a números decimales
+           double totalSemanal = alimentacion + refrigerios + transporte + telefonia + otros;
 
-            // 3. Determinamos cuál fue el Gasto Más Alto usando condiciones (if)
+           // 3. Determino cuál fue el Gasto Más Alto usando condiciones (if)
             double mayor = alimentacion;
             String categoriaMayor = "Alimentación";
 
@@ -51,7 +51,7 @@ public class PrimaryController {
                 categoriaMayor = "Otros";
             }
 
-            // 4. Mostramos los resultados en la columna derecha de estadísticas
+            
             txtTotal.setText(String.valueOf(totalSemanal));
             txtGastoAlto.setText(categoriaMayor);
 
@@ -64,14 +64,14 @@ public class PrimaryController {
 
     @FXML
     private void limpiar() {
-        // 1. Vaciamos las 5 cajas de gastos
+        // 1. Vacio las 5 cajas de gastos
         txtAlimentacion.setText("");
         txtRefrigerios.setText("");
         txtTransporte.setText("");
         txtTelefonia.setText("");
         txtOtros.setText("");
         
-        // 2. Vaciamos las 2 cajas de estadísticas de la derecha
+        // 2. Vacio las 2 cajas de estadísticas de la derecha
         txtTotal.setText("");
         txtGastoAlto.setText("");
     }
